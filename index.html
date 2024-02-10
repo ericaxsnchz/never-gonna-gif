@@ -18,14 +18,14 @@
         </nav>
     </header>
 
-    <section class="section-bg gif-search">
-        <form class="search" role="search">
-            <input type="search" placeholder="Search Giphy">
-            <button type="submit">Search</button>
-        </form>
+    <section class="search">
+            <input id="searchInput" type="search" placeholder="Search Giphy">
+            <button onclick="sendApiRequest()" type="submit">Search</button>
+            <div class="searchContainer"></div>
     </section>
-    <section class="section-bg gif-data"></section>
-    <section class="gif-upload"></section>
+
+    <section class="trending">
+    </section>
 
     <script src="./js/index.js"></script>
 </body>
