@@ -1,8 +1,8 @@
 function sendApiRequest() {
-    clearPreviousResults('.search-container')
+    clearPreviousResults('.search-container');
 
-    var userInput = document.getElementById("searchInput").value
-    console.log(userInput)
+    var userInput = document.getElementById("searchInput").value;
+    console.log(userInput);
 
     var giphyApiKey = "3qvGnKWxpi2di8iX33uvgkUdXiFIrbFN"
     var giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&api_key=${giphyApiKey}&limit=5`
@@ -21,11 +21,11 @@ function sendApiRequest() {
                 var imgPath = gif.images.original.url;
                 var img = document.createElement("img");
                 img.setAttribute("src", imgPath);
-                document.body.appendChild(img);
+                container.appendChild(img);
             });
-            document.body.appendChild(container);
+            document.querySelector('.search-container').appendChild(container);
         })
-        .catch(function(eroor) {
+        .catch(function(error) {
             console.error("Error fetching Giphy API: ", error)
         })
 }
@@ -34,7 +34,7 @@ function trendingRequest() {
 
     const trendingContainer = document.createElement('div');
     trendingContainer.className = 'trending-container';
-    
+
     var giphyApiKey = "3qvGnKWxpi2di8iX33uvgkUdXiFIrbFN"
     var trendingURL = `https://api.giphy.com/v1/gifs/trending?&api_key=${giphyApiKey}&limit=20`
 
@@ -49,17 +49,17 @@ function trendingRequest() {
                 var imgPath = gif.images.original.url;
                 var img = document.createElement("img");
                 img.setAttribute("src", imgPath);
-                document.body.appendChild(img);
+                trendingContainer.appendChild(img);
             });
-            document.body.appendChild(container);
+            document.body.appendChild(trendingContainer);
         })
-        .catch(function(eroor) {
+        .catch(function(error) {
             console.error("Error fetching Giphy API: ", error)
         })
-}
+};
 
-function clearPreviousResults() {
-    var previousResults = document.querySelectorAll("img");
+function clearPreviousResults(containerClass) {
+    var previousResults = document.querySelectorAll(containerClass + " img");
     previousResults.forEach(function(result) {
         result.remove();
     })
