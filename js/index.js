@@ -30,6 +30,34 @@ function sendApiRequest() {
         })
 }
 
+function trendingSearches() {
+
+    const trendingList = document.getElementById("trendingList");
+    trendingList.innerHTML = "";
+
+    var giphyApiKey = "3qvGnKWxpi2di8iX33uvgkUdXiFIrbFN"
+    var trendSearchURL = `https://api.giphy.com/v1/trending/searches?&api_key=${giphyApiKey}`
+    
+    fetch(trendSearchURL)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            console.log(json.data)
+
+            json.data.forEach(function(searchTerm) {
+                var listItem = document.createElement("li");
+                listItem.textContent = searchTerm;
+                trendingList.appendChild(listItem);
+            });
+        })
+        .catch(function(error) {
+            console.error("Error fetching trending searches from Giphy API. ", error)
+        })
+        
+
+}
+
 function trendingRequest() {
 
     const trendingContainer = document.createElement('div');
@@ -65,4 +93,5 @@ function clearPreviousResults(containerClass) {
     })
 }
 
+trendingSearches();
 trendingRequest();
