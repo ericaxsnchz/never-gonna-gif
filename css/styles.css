@@ -4,3 +4,15 @@ body {
 .search {
     background-color: #B75D69;
 }
+
+.search-container > img {
+    height: 220px;
+    width: 250px;
+    padding: 10px 0px 10px 13px
+}
+
+.trending-container > img {
+    height: 300px;
+    width: 320px;
+    padding: 10px 5px 5px 7px;
+}
