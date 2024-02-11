@@ -30,6 +30,11 @@ function sendApiRequest() {
         })
 }
 
+function performSearch (searchTerm) {
+    document.getElementById("searchInput").value = searchTerm;
+    sendApiRequest();
+}
+
 function trendingSearches() {
 
     const trendingList = document.getElementById("trendingList");
@@ -48,6 +53,9 @@ function trendingSearches() {
             json.data.forEach(function(searchTerm) {
                 var listItem = document.createElement("li");
                 listItem.textContent = searchTerm;
+                listItem.addEventListener("click", function(){
+                    performSearch(searchTerm);
+                });
                 trendingList.appendChild(listItem);
             });
         })

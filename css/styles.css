@@ -39,7 +39,27 @@ body {
 .search-container > img {
     height: 220px;
     width: 250px;
-    padding: 10px 0px 10px 13px
+    padding: 10px 6px 10px 7px;
+    margin-top: 10px;
+}
+
+.trending-searches {
+    color: white;
+    background-color: #B75D69;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#trendingList {
+    list-style: none;
+    column-count: 3;
+    margin-bottom: 3px;
+    font-size: 20px;
+}
+
+#trendingList li:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .trending-container > img {
