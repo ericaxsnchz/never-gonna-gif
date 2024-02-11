@@ -1,8 +1,39 @@
 body {
     background-color: #774C60;
 }
+
+.header-nav {
+    background-color: #B75D69;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3px 5px 3px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    margin: 0rem 9rem;
+}
+
+.header-nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.header-menu-item {
+    font-size: 20px;
+    color: white;
+    margin: 0px 20px;
+}
+
 .search {
     background-color: #B75D69;
+    padding: 10px;
 }
 
 .search-container > img {
