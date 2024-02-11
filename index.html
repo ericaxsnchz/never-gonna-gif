@@ -3,34 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Never Gonna Gif You Up</title>
+    <title>never gonna gif you up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/541629fd61.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="home-page">
     <header>
         <nav class="header-nav">
-            <a href="./index.html" class="logo">Never Gonna Gif You Up</a>
+            <a href="./index.html" class="logo">never gonna gif you up</a>
             <ul class="header-nav-menu">
-                <li class="header-menu-item">Sign Up!</li>
-                <li class="header-menu-item">Create</li>
-                <li class="header-menu-item">About</li>
+                <li class="header-menu-item">sign up</li>
+                <li class="header-menu-item">create</li>
+                <li class="header-menu-item">about</li>
             </ul>
         </nav>
     </header>
 
     <section class="search">
             <input id="searchInput" type="search" placeholder="Search Giphy">
-            <button onclick="sendApiRequest()" type="submit">Search</button>
+            <button onclick="sendApiRequest()" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></button>
             <div class="search-container"></div>
     </section>
 
     <section class="trending-searches">
-        <h2>Trending Searches</h2>
+        <h2>trending searches   <i class="fa-solid fa-chart-simple" style="color: white;"></i></h2>
         <ul id="trendingList"></ul>
     </section>
 
     <section class="trending">
-        <h2>Trending</h2>
+        <h2>trending   <i class="fa-solid fa-arrow-trend-up" style="color: white;"></i></h2>
         <div class="trending-container"></div>
     </section>
 
