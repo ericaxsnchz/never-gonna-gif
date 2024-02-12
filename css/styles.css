@@ -40,8 +40,17 @@ header {
 
 .header-menu-item {
     font-size: 25px;
+    margin: 0px 15px;
+}
+
+.header-menu-item a {
+    text-decoration: none;
     color: white;
-    margin: 0px 20px;
+}
+
+.header-menu-item a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .search {
@@ -98,6 +107,13 @@ button {
 
 .trending, .trending-container {
     margin: 10px 50px;
+}
+
+.trending {
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: rgba(255, 255, 255, 0.281);
 }
 
 #trendingList {
