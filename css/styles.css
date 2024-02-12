@@ -45,6 +45,37 @@ h2 {
     padding: 10px;
 }
 
+.searchOnly {
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput::-webkit-search-cancel-button {
+    appearance: none;
+    display: none;
+}
+
+input {
+    font-family: "Righteous", sans-serif;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.623);
+    color: rgb(0, 0, 0);
+    height: 4rem;
+    width: 80%;
+    padding: 5px;
+    float: left;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+button {
+    background-color: rgba(161, 160, 160, 0.603);
+    width: 70px;
+    height: 4rem;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+
 .search-container > img {
     height: 220px;
     width: 250px;

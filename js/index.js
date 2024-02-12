@@ -5,7 +5,7 @@ function sendApiRequest() {
     console.log(userInput);
 
     var giphyApiKey = "3qvGnKWxpi2di8iX33uvgkUdXiFIrbFN"
-    var giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&api_key=${giphyApiKey}&limit=5`
+    var giphyApiURL = `https://api.giphy.com/v1/gifs/search?q=${userInput}&api_key=${giphyApiKey}&limit=10`
 
     fetch(giphyApiURL)
         .then(function(response) {
@@ -102,4 +102,11 @@ function clearPreviousResults(containerClass) {
 }
 
 trendingSearches();
+
+document.getElementById("searchInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        sendApiRequest();
+    }
+});
+
 trendingRequest();
