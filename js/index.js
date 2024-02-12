@@ -22,6 +22,7 @@ function sendApiRequest() {
                 var img = document.createElement("img");
                 img.setAttribute("src", imgPath);
                 container.appendChild(img);
+
             });
             document.querySelector('.search-container').appendChild(container);
         })
@@ -72,7 +73,7 @@ function trendingRequest() {
     trendingContainer.className = 'trending-container';
 
     var giphyApiKey = "3qvGnKWxpi2di8iX33uvgkUdXiFIrbFN"
-    var trendingURL = `https://api.giphy.com/v1/gifs/trending?&api_key=${giphyApiKey}&limit=20`
+    var trendingURL = `https://api.giphy.com/v1/gifs/trending?&api_key=${giphyApiKey}&limit=40`
 
     fetch(trendingURL)
         .then(function(response) {
