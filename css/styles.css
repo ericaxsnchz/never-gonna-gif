@@ -140,9 +140,6 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-     
-    }
  
     header {
        margin: 10px 10px; 
@@ -154,7 +151,7 @@ button {
  
     .logo {
        margin: 0;
-       font-size: 1.65rem;
+       font-size: 1.5rem;
        text-align: center;
        margin-left: 0;
     }
@@ -166,12 +163,12 @@ button {
 
     .header-nav-menu {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 0;
     }
  
     .header-menu-item {
-       font-size: 0.75rem; 
+       font-size: 1.25rem; 
     }
  
     .search {
@@ -181,8 +178,10 @@ button {
 
 
     .search-container > img {
-        height: 8rem;
-        width: 8rem;
+        height: 15rem;
+        width: 15rem;
+        padding: 10px;
+        margin: 10px;
     }     
  
     input {
@@ -201,9 +200,10 @@ button {
        font-size: 4rem;
     }
     .trending-container > img {
-        height: 8rem;
-        width: 8rem;
-        padding: 10px 5px 5px 7px;
+        height: 15rem;
+        width: 15rem;
+        padding: 10px;
+        margin: 10px;
     }
  
     #trendingList {
